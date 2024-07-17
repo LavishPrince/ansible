@@ -9,5 +9,10 @@
     - git
     - ruby
     - ruby-dev
+    - i3
+    - polybar
+    - picom
+    - rofi
+    - alacritty
   tags:
     - basic
