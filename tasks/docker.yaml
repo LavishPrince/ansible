@@ -82,7 +82,7 @@
 
 - name: Add user to docker group
   user:
-    name: "{{ ansible_user }}"
+    name: vinay
     groups: docker
     append: yes
   tags:

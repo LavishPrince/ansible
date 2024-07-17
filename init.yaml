@@ -17,8 +17,8 @@
         - neovim
 
   tasks:
-    - include: ./tasks/basic-tools.yaml
-    - include: ./tasks/node.yaml
-    - include: ./tasks/brew.yaml
-    - include: ./tasks/docker.yaml
-    - include: ./tasks/dotfiles.yaml
+    - include_tasks: ./tasks/basic-tools.yaml
+    - include_tasks: ./tasks/node.yaml
+    - include_tasks: ./tasks/brew.yaml
+    - include_tasks: ./tasks/docker.yaml
+    - include_tasks: ./tasks/dotfiles.yaml
