@@ -14,7 +14,7 @@
   shell: |
     cd dotfiles
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    /home/linuxbrew/.linuxbrew/bin/stow .
+    /home/linuxbrew/.linuxbrew/bin/stow -t ~ *
   tags:
     - brew
     - stow
