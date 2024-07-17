@@ -1,0 +1,19 @@
+- name: Install software using Linuxbrew
+  become: false
+  become_user: vinay
+  shell: /home/linuxbrew/.linuxbrew/bin/brew install {{ item }}
+  loop:
+    - stow
+  tags:
+    - brew
+    - stow
+
+- name: Stow Dotfiles
+  become: false
+  become_user: vinay
+  shell: |
+    cd dotfiles
+    /home/linuxbrew/.linuxbrew/bin/stow .
+  tags:
+    - brew
+    - stow

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Get the current tmux session name
+session=$(tmux display-message -p '#S')
+
+# List all windows in the current tmux session, and use fzf to select or enter a new one
+selected_window=$( (tmux list-windows -F "#{window_index}: #{window_name}" ; echo "NEW_WINDOW") | fzf --prompt="Select or enter new window: ")
+
+if [ "$selected_window" == "NEW_WINDOW" ]; then
+    # Prompt for the new window name
+    read -p "Enter new window name: " new_window_name
+    # Create a new window with the provided name
+    tmux new-window -n "$new_window_name"
+else
+    # Extract the window index from the selected window
+    window_index=$(echo "$selected_window" | cut -d ':' -f 1)
+    # Switch to the selected window
+    if [ -n "$window_index" ]; then
+        tmux select-window -t "$session:$window_index"
+    fi
+fi
+

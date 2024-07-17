@@ -1,0 +1,24 @@
+---
+- name: Setup New System
+  hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update Cache
+      apt:
+        update_cache: true
+      tags:
+        - brew
+        - node
+        - basic
+        - tmux
+        - dotfiles
+        - zsh
+        - ranger
+        - neovim
+
+  tasks:
+    - include: ./tasks/basic-tools.yaml
+    - include: ./tasks/node.yaml
+    - include: ./tasks/brew.yaml
+    - include: ./tasks/docker.yaml
+    - include: ./tasks/dotfiles.yaml

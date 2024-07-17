@@ -1,0 +1,13 @@
+- name: Update package lists and install prerequisites
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - build-essential
+    - curl
+    - file
+    - git
+    - ruby
+    - ruby-dev
+  tags:
+    - basic
