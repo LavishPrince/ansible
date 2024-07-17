@@ -28,6 +28,7 @@
     - zsh
     - minikube
     - kubectl
+    - helm
   tags:
     - brew
     - zsh
