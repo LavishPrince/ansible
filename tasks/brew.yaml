@@ -29,6 +29,7 @@
     - minikube
     - kubectl
     - helm
+    - git-delta
   tags:
     - brew
     - zsh
