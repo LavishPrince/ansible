@@ -1,8 +1,2 @@
 require("vinay.core")
 require("vinay.lazy")
-vim.cmd("hi Normal guibg=NONE")
-vim.cmd("highlight Normal ctermbg=none guibg=none")
-vim.cmd("highlight NonText ctermbg=none guibg=none")
-vim.cmd("highlight LineNr ctermbg=none guibg=none")
-vim.cmd("highlight Folded ctermbg=none guibg=none")
-vim.cmd("highlight EndOfBuffer ctermbg=none guibg=none")

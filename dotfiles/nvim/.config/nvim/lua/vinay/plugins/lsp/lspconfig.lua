@@ -154,6 +154,14 @@ return {
 					},
 				})
 			end,
+			["clangd"] = function()
+				-- configure clangd server for C++ and C
+				lspconfig["clangd"].setup({
+					capabilities = capabilities,
+					filetypes = { "c", "cpp", "objc", "objcpp" },
+					cmd = { "clangd", "--background-index", "--clang-tidy" },
+				})
+			end,
 		})
 	end,
 }
