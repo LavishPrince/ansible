@@ -9,7 +9,7 @@ padding = { x = 5, y = 0 }
 decorations = "Buttonless"
 opacity = 0.8
 option_as_alt = "Both"
-blur = true
+# blur = true
 
 [selection]
 save_to_clipboard = true
