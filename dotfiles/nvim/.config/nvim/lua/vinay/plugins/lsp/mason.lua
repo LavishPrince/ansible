@@ -37,6 +37,7 @@ return {
 				"svelte",
 				"marksman",
 				"lua_ls",
+				"gopls",
 				"graphql",
 				"harper_ls",
 				"emmet_ls",
@@ -60,6 +61,8 @@ return {
 				"clang-format",
 				"ast-grep",
 				"cpplint",
+				"gofumpt",
+				"golangci-lint",
 			},
 		})
 	end,

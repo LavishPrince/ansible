@@ -121,6 +121,13 @@ return {
 					filetypes = { "rust" },
 				})
 			end,
+			["gopls"] = function()
+				-- configure graphql language server
+				lspconfig["gopls"].setup({
+					capabilities = capabilities,
+					filetypes = { "go" },
+				})
+			end,
 			["emmet_ls"] = function()
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({

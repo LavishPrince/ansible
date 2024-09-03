@@ -24,6 +24,7 @@ return {
 				python = { "isort", "black" },
 				bash = { "beautysh" },
 				sh = { "beautysh" },
+				go = { "gofumpt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
