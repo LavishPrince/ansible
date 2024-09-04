@@ -13,7 +13,6 @@ return {
 			csharp = { "cpplint" },
 			svelte = { "eslint_d" },
 			python = { "pylint" },
-			rust = { "harper-ls" },
 			go = { "golangcilint" },
 		}
 
