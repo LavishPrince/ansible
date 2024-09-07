@@ -1,3 +1,5 @@
 lazy-lock.json
 LavishPrince
 Vinaydg
+.DS_Store
+dotfiles/nvim/.config/nvim/lazyvim.json
