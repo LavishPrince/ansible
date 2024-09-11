@@ -1,15 +1,8 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Set the directory where we store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Brew Installation initialization
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -22,7 +15,6 @@ source "$ZINIT_HOME/zinit.zsh"
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 # Add in Powerlevel10l
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -43,9 +35,6 @@ zinit snippet OMZP::command-not-found
 autoload -U compinit && compinit
 
 zinit cdreplay -q
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
 # bindkey -e
@@ -88,8 +77,16 @@ source <(kubectl completion zsh)
 source <(helm completion zsh)
 export EDITOR=nvim
 
-bindkey -s '^[f'  "$HOME/.tmux/tmux-sessionizer\n" > /dev/null
-bindkey -s '^[w' "$HOME/.tmux/tmux-window-selector\n" > /dev/null
+tmux_sessionizer(){
+  "$HOME/.tmux/tmux-sessionizer" > /dev/null
+}
+
+tmux_window_selector(){
+  "$HOME/.tmux/tmux-window-selector" > /dev/null
+}
+bindkey -s '^f'  "tmux_sessionizer\n"
+bindkey -s '^w' "tmux_window_selector\n"
+
 # -- Use fd instead of fzf --
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -141,3 +138,4 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+eval "$(starship init zsh)"
