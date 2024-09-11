@@ -2,7 +2,6 @@
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Brew Installation initialization
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -84,8 +83,8 @@ tmux_sessionizer(){
 tmux_window_selector(){
   "$HOME/.tmux/tmux-window-selector" > /dev/null
 }
-bindkey -s '^f'  "tmux_sessionizer\n"
-bindkey -s '^w' "tmux_window_selector\n"
+bindkey -s '^[f'  "tmux_sessionizer\n"
+bindkey -s '^[w' "tmux_window_selector\n"
 
 # -- Use fd instead of fzf --
 
