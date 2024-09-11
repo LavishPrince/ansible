@@ -19,6 +19,7 @@
     - fzf
     - neovim
     - tmux
+    - starship
     - eza
     - zoxide
     - btop
