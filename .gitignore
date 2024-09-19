@@ -1,5 +1,6 @@
 lazy-lock.json
-LavishPrince
-Vinaydg
+dotfiles/ssh/.ssh/LavishPrince
+dotfiles/ssh/.ssh/Vinaydg
+
 .DS_Store
 dotfiles/nvim/.config/nvim/lazyvim.json

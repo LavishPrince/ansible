@@ -2,7 +2,7 @@
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Brew Installation initialization
-
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
