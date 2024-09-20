@@ -11,7 +11,7 @@
 
 for_window [class="^.*"] border pixel 1
 
-# set $mod Mod4
+set $mod1 Mod4
 set $mod Mod1
 
 exec --no-startup-id picom
@@ -74,7 +74,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -92,6 +91,7 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+p exec --no-startup-id flameshot gui
 bindsym $mod+b exec --no-startup-id google-chrome
 
+bindsym $mod1+t exec --no-startup-id polybar-msg cmd toggle
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down

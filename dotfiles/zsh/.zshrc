@@ -83,8 +83,8 @@ tmux_sessionizer(){
 tmux_window_selector(){
   "$HOME/.tmux/tmux-window-selector" > /dev/null
 }
-bindkey -s '^[f'  "tmux_sessionizer\n"
-bindkey -s '^[w' "tmux_window_selector\n"
+bindkey -s '^f'  "tmux_sessionizer\n"
+bindkey -s '^w' "tmux_window_selector\n"
 
 # -- Use fd instead of fzf --
 
