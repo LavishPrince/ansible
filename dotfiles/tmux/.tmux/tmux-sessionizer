@@ -1,6 +1,6 @@
 #!/bin/bash
 
-session=$(find -L ~ ~/.config ~/.tmux ~/Desktop ~/Downloads ~/Documents -path ~/Library -prune -o -mindepth 1 -maxdepth 4 -type d  | fzf)
+session=$(find -L   ~ ~/.config ~/.tmux ~/Desktop ~/Downloads ~/Documents -path ~/Library -prune -o -mindepth 1 -maxdepth 4 -type d  | fzf)
 session_name=$(basename "$session" | tr . _)
 
 

@@ -40,6 +40,9 @@ zinit cdreplay -q
 bindkey '^[[A' history-search-backward  # Up key
 bindkey '^[[B' history-search-forward  # Down key
 
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # History
 HISTSIZE=6000
 HISTFILE=~/.zsh_history
@@ -138,3 +141,4 @@ _fzf_comprun() {
   esac
 }
 eval "$(starship init zsh)"
+export PATH=$HOME/.local/bin:$PATH
