@@ -11,4 +11,4 @@ This repository contains the Ansible playbook that will install and configure al
 ## License
 
 MIT License (see [LICENSE](LICENSE))  
-Copyright (c) 2017 Alexandre DuBreuil
+Copyright (c) 2024 Vinay DG
