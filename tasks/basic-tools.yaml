@@ -13,6 +13,6 @@
     - polybar
     - picom
     - rofi
-    - alacritty
+    - kitty
   tags:
     - basic
