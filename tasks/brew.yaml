@@ -1,9 +1,7 @@
 - name: Install Linuxbrew
   become: false
-  become_user: vinay
   shell: |
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/vinay/.bashrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   tags:
     - brew
@@ -13,7 +11,6 @@
     - neovim
 - name: Install software using Linuxbrew
   become: false
-  become_user: vinay
   shell: /home/linuxbrew/.linuxbrew/bin/brew install {{ item }}
   loop:
     - fzf

@@ -57,6 +57,7 @@ return {
 				"pylint", -- python linter
 				"eslint_d", -- js linter
 				"sonarlint-language-server",
+				"npm-groovy-lint",
 				"beautysh",
 				"clang-format",
 				"ast-grep",

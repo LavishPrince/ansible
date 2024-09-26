@@ -25,6 +25,7 @@ return {
 				bash = { "beautysh" },
 				sh = { "beautysh" },
 				go = { "gofumpt" },
+				groovy = { "npm-groovy-lint" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

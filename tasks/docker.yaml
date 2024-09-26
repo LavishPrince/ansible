@@ -79,11 +79,3 @@
     enabled: yes
   tags:
     - docker
-
-- name: Add user to docker group
-  user:
-    name: vinay
-    groups: docker
-    append: yes
-  tags:
-    - docker
