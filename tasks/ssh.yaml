@@ -2,15 +2,23 @@
   become: false
   tags:
     - sshkey
-  copy:
-    content: "{{ lookup('file', './sshkeys/Vinaydg') }}"
-    dest: "~/.ssh/Vinaydg"
-    mode: "0600"
+  ansible.builtin.copy:
+    src: "sshkeys/Vinaydg"
+    dest: "~/.ssh"
+    mode: "0400"
 - name: Copy SSH key 2
   become: false
   tags:
     - sshkey
-  copy:
-    content: "{{ lookup('file', './sshkeys/LavishPrince') }}"
-    dest: "~/.ssh/LavishPrince"
-    mode: "0600"
+  ansible.builtin.copy:
+    src: "sshkeys/LavishPrince"
+    dest: "~/.ssh"
+    mode: "0400"
+- name: Decrypt the vault file
+  ansible.builtin.command:
+    cmd: >
+      ansible-vault decrypt ~/.ssh/{{ item }}
+  with_items:
+    - "LavishPrince"
+    - "Vinaydg"
+  no_log: true
