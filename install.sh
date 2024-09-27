@@ -9,5 +9,6 @@ git clone -b ubuntu https://github.com/LavishPrince/ansible
 
 cd ~/personal/ansible
 sudo apt update
+sed -i '/- include_tasks: .\/tasks\/docker.yaml/d' init.yaml
 ansible-playbook init.yaml --ask-vault-pass
 ansible-playbook init.yaml --ask-vault-pass --tags=sshkey
