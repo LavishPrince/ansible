@@ -5,7 +5,7 @@ sudo apt install -y git ansible
 
 mkdir ~/personal
 cd ~/personal
-git clone https://github.com/LavishPrince/ansible
+git clone -b ubuntu https://github.com/LavishPrince/ansible
 
 cd ~/personal/ansible
 sudo apt update
