@@ -28,6 +28,7 @@
     - ranger
     - zsh
     - minikube
+    - rust
     - kubectl
     - helm
     - git-delta
