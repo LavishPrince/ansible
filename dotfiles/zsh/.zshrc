@@ -120,7 +120,7 @@ cyan="#2CF9ED"
 
 # ----- Bat (better cat) -----
 
-export BAT_THEME=tokyonight_night
+# export BAT_THEME=tokyonight_night
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
 
@@ -142,3 +142,8 @@ _fzf_comprun() {
 }
 eval "$(starship init zsh)"
 export PATH=$HOME/.local/bin:$PATH
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+source <(devbox completion zsh)

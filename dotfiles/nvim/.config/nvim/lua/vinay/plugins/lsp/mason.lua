@@ -44,6 +44,7 @@ return {
 				"prismals",
 				"pyright",
 				"clangd",
+				"terraformls",
 			},
 		})
 

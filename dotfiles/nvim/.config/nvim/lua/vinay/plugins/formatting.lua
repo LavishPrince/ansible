@@ -25,7 +25,9 @@ return {
 				bash = { "beautysh" },
 				sh = { "beautysh" },
 				go = { "gofumpt" },
-				groovy = { "npm-groovy-lint" },
+				terraform = { "terraform_fmt" },
+				tf = { "terraform_fmt" },
+				["terraform-vars"] = { "terraform_fmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

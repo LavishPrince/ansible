@@ -121,6 +121,13 @@ return {
 					filetypes = { "rust" },
 				})
 			end,
+			["terraformls"] = function()
+				-- configure graphql language server
+				lspconfig["terraformls"].setup({
+					capabilities = capabilities,
+					filetypes = { "tf", "terraform" },
+				})
+			end,
 			["gopls"] = function()
 				-- configure graphql language server
 				lspconfig["gopls"].setup({

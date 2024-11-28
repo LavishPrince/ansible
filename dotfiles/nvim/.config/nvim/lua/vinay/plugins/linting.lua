@@ -14,6 +14,8 @@ return {
 			svelte = { "eslint_d" },
 			python = { "pylint" },
 			go = { "golangcilint" },
+			terraform = { "terraform_validate" },
+			tf = { "terraform_validate" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
