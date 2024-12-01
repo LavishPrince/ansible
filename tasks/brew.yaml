@@ -11,6 +11,7 @@
     - ansible
     - bat
     - btop
+    - deno
     - eza
     - fastlane
     - sketchybar
@@ -33,6 +34,7 @@
     - tlrc
     - wget
     - xcbeautify
+    - yarn
     - zoxide
     - zsh
 
