@@ -2,6 +2,8 @@
   shell: brew tap {{ item }}
   with_items:
     - FelixKratz/formulae
+    - homebrew/services
+    - koekeishiya/formulae
 
 - name: Install CLI tools
   shell: brew install {{ item }}
