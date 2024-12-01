@@ -1,40 +1,55 @@
-- name: Install Linuxbrew
-  become: false
-  become_user: vinay
-  shell: |
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/vinay/.bashrc
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  tags:
-    - brew
-    - zsh
-    - ranger
-    - tmux
-    - neovim
-- name: Install software using Linuxbrew
-  become: false
-  become_user: vinay
-  shell: /home/linuxbrew/.linuxbrew/bin/brew install {{ item }}
-  loop:
-    - fzf
-    - neovim
-    - tmux
-    - starship
-    - eza
-    - zoxide
+- name: Open Some brew taps
+  shell: brew tap {{ item }}
+  with_items:
+    - FelixKratz/formulae
+
+- name: Install CLI tools
+  shell: brew install {{ item }}
+  with_items:
+    - ansible
+    - bat
     - btop
-    - tlrc
-    - rg
-    - ranger
-    - zsh
-    - minikube
-    - rust
-    - kubectl
-    - helm
+    - eza
+    - fastlane
+    - sketchybar
+    - fzf
     - git-delta
-  tags:
-    - brew
-    - zsh
-    - ranger
-    - tmux
+    - gofumpt
+    - golangci-lint
+    - helm
+    - htop
+    - jq
+    - minikube
     - neovim
+    - node
+    - onefetch
+    - ranger
+    - ripgrep
+    - starship
+    - stow
+    - tmux
+    - tlrc
+    - wget
+    - xcbeautify
+    - zoxide
+    - zsh
+
+- name: Install GUI apps (casks)
+  shell: brew install --cask {{ item }}
+  with_items:
+    - nikitabobko/tap/aerospace
+    - alacritty
+    - android-file-transfer
+    - anydesk
+    - docker
+    - font-meslo-lg-nerd-font
+    - font-sf-pro
+    - google-chrome
+    - protonvpn
+    - raycast
+    - royal-tsx
+    - sf-symbols
+    - termius
+    - tor-browser
+    - zed
+    - zen-browser
