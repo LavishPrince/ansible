@@ -6,4 +6,5 @@ dotfiles/ssh/.ssh/Vinaydg
 dotfiles/nvim/.config/nvim/lazyvim.json
 dotfiles/**/LavishPrince
 dotfiles/**/Vinaydg
-
+dotfiles/**/known_hosts
+dotfiles/**/known_hosts.old
