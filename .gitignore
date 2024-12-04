@@ -3,3 +3,5 @@ lazy-lock.json
 dotfiles/nvim/.config/nvim/lazyvim.json
 dotfiles/ssh/.ssh/LavishPrince
 dotfiles/ssh/.ssh/Vinaydg
+dotfiles/ssh/**/known_hosts
+dotfiles/ssh/**/known_hosts.old
