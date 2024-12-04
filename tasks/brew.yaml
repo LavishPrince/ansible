@@ -8,7 +8,6 @@
 - name: Install CLI tools
   shell: brew install {{ item }}
   with_items:
-    - ansible
     - bat
     - btop
     - deno
