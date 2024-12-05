@@ -9,8 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-for_window [class="^.*"] border pixel 1
-
+# for_window [class="^.*"] border pixel 1
+default_border pixel 1
+default_floating_border pixel 1
 set $mod1 Mod4
 set $mod Mod1
 
