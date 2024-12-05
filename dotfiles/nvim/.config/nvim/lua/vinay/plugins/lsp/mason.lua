@@ -59,7 +59,8 @@ return {
 				"eslint_d", -- js linter
 				"sonarlint-language-server",
 				"npm-groovy-lint",
-				"beautysh",
+				"shellharden",
+				"shfmt",
 				"clang-format",
 				"ast-grep",
 				"cpplint",

@@ -23,7 +23,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				bash = { "beautysh" },
-				sh = { "beautysh" },
+				sh = { "shellharden" },
 				go = { "gofumpt" },
 				terraform = { "terraform_fmt" },
 				tf = { "terraform_fmt" },
