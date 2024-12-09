@@ -24,13 +24,21 @@ return {
 				-- Buffer local mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
 				local opts = { buffer = ev.buf, silent = true }
-
+				vim.opt.updatetime = 500
+				vim.api.nvim_create_autocmd("CursorHold", {
+					callback = function()
+						vim.lsp.buf.hover()
+					end,
+				})
 				-- set keybinds
 				opts.desc = "Show LSP references"
 				keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
 				opts.desc = "Go to declaration"
 				keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+
+				opts.desc = "Explain"
+				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- go to declaration
 
 				opts.desc = "Show LSP definitions"
 				keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
