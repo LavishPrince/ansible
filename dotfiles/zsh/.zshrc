@@ -67,6 +67,7 @@ zstyle ';fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color --icons $realpa
 alias ls='eza --color --icons=always'
 alias tmux='tmux -u'
 alias vim=nvim
+alias v=nvim
 alias btop="btop --utf-force"
 alias cat="bat"
 
