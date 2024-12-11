@@ -26,12 +26,6 @@ return {
 				local opts = { buffer = ev.buf, silent = true }
 
 				-- set keybinds
-				vim.opt.updatetime = 500
-				vim.api.nvim_create_autocmd("CursorHold", {
-					callback = function()
-						vim.lsp.buf.hover()
-					end,
-				})
 				opts.desc = "Show LSP references"
 				keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
