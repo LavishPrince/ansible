@@ -27,6 +27,7 @@
     - onefetch
     - ranger
     - ripgrep
+    - rust
     - starship
     - stow
     - tmux
