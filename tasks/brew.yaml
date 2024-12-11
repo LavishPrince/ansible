@@ -9,6 +9,8 @@
   shell: brew install {{ item }}
   with_items:
     - bat
+    - chafa
+    - fd
     - btop
     - deno
     - eza

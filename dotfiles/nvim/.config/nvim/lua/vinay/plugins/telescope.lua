@@ -3,7 +3,9 @@ return {
 	branch = "0.1.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+		"nvim-lua/popup.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		"nvim-telescope/telescope-media-files.nvim",
 		"nvim-tree/nvim-web-devicons",
 		"folke/todo-comments.nvim",
 	},
@@ -25,6 +27,11 @@ return {
 		telescope.setup({
 			defaults = {
 				path_display = { "smart" },
+				layout_config = {
+					horizontal = {
+						preview_cutoff = 0,
+					},
+				},
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -37,6 +44,7 @@ return {
 		})
 
 		telescope.load_extension("fzf")
+		telescope.load_extension("media_files")
 
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
