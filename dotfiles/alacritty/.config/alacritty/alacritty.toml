@@ -15,5 +15,6 @@ blur = true
 save_to_clipboard = true
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
-size = 18.3
+normal.family = "JetBrainsMono Nerd Font Mono"
+normal.style = "Italic"
+size = 21.1
