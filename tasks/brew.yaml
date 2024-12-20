@@ -12,6 +12,7 @@
     - chafa
     - fd
     - btop
+    - oven-sh/bun/bun
     - deno
     - eza
     - fastlane
