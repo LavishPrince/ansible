@@ -4,6 +4,7 @@
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     git clone https://github.com/junegunn/fzf-git.sh.git
+    mv fzf-git.sh ~
   tags:
     - brew
     - zsh
