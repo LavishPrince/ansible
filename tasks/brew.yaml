@@ -1,9 +1,12 @@
 - name: Open Some brew taps
-  shell: brew tap {{ item }}
+  community.general.homebrew_tap:
+    name: "{{ item }}"
   with_items:
     - FelixKratz/formulae
     - homebrew/services
     - koekeishiya/formulae
+    - mongodb/brew
+    - oven-sh/bun
 
 - name: Install CLI tools
   community.general.homebrew:
@@ -15,7 +18,7 @@
     - chafa
     - fd
     - btop
-    - oven-sh/bun/bun
+    - bun
     - deno
     - eza
     - fastlane
@@ -29,6 +32,7 @@
     - jq
     - minikube
     - mas
+    - mongodb-database-tools
     - neovim
     - node
     - onefetch
@@ -75,6 +79,7 @@
     id: "{{item}}"
     state: latest
   with_items:
+    - 409201541
     - 497799835
     - 571213070
     - 409183694

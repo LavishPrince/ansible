@@ -1,7 +1,8 @@
-- name: Install software using Linuxbrew
-  shell: brew install {{ item }}
-  loop:
-    - stow
+- name: Install stow using brew
+  community.general.homebrew:
+    name: stow
+    force_formula: true
+    state: latest
 
 - name: Stow Dotfiles
   shell: |
