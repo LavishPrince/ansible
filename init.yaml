@@ -7,5 +7,5 @@
       ansible.builtin.git:
         repo: "https://github.com/junegunn/fzf-git.sh.git"
         dest: "$HOME/fzf-git.sh"
-    - include_tasks: ./tasks/brew.yaml
-    - include_tasks: ./tasks/dotfiles.yaml
+    - ansible.builtin.include_tasks: ./tasks/brew.yaml
+    - ansible.builtin.include_tasks: ./tasks/dotfiles.yaml
