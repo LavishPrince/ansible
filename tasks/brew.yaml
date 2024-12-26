@@ -24,6 +24,7 @@
     - fastlane
     - sketchybar
     - fzf
+    - git
     - git-delta
     - gofumpt
     - golangci-lint
