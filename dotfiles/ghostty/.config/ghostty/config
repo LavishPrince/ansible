@@ -1,7 +1,7 @@
 window-decoration = false
 keybind = alt+f=text:~/.tmux/tmux-sessionizer\n
 font-feature = -liga
-theme = Github Dark
+theme = LiquidCarbonTransparent
 background = black
 background-opacity = 0.75
 background-blur-radius = 20
