@@ -3,8 +3,9 @@ keybind = alt+f=text:~/.tmux/tmux-sessionizer\n
 keybind = alt+w=text:~/.tmux/tmux-window-selector\n
 font-feature = -liga
 theme = Ayu Mirage
-background-opacity = 0.7
-background-blur-radius = 15
+background = black
+background-opacity = 0.8
+background-blur-radius = 30
 font-family = "JetBrainsMono Nerd Font Mono"
 font-style = "Italic"
 font-size = 20
