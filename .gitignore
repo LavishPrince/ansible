@@ -1,7 +1,7 @@
 lazy-lock.json
 .DS_Store
-dotfiles/nvim/.config/nvim/lazyvim.json
-dotfiles/ssh/.ssh/LavishPrince
-dotfiles/ssh/.ssh/Vinaydg
-dotfiles/ssh/**/known_hosts
-dotfiles/ssh/**/known_hosts.old
+dotfiles/home/.config/nvim/lazyvim.json
+dotfiles/home/.ssh/LavishPrince
+dotfiles/home/.ssh/Vinaydg
+dotfiles/home/**/known_hosts
+dotfiles/home/**/known_hosts.old
