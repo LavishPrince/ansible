@@ -1,5 +1,6 @@
 window-decoration = false
 keybind = alt+f=text:~/.tmux/tmux-sessionizer\n
+keybind = alt+f=text:~/.tmux/tmux-window-selector\n
 font-feature = -liga
 theme = Ayu Mirage
 background-opacity = 0.7
