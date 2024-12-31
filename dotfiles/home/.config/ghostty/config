@@ -1,0 +1,8 @@
+window-decoration = false
+theme = Ayu Mirage
+background = black
+background-opacity = 0.8
+background-blur-radius = 30
+font-family = "JetBrainsMono Nerd Font Mono"
+font-style = "Italic"
+font-size = 18

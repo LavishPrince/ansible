@@ -82,6 +82,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id nixGL alacritty
+bindsym $mod+g exec --no-startup-id nixGL ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
