@@ -138,12 +138,11 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-# alt-shift-b = 'move-node-to-workspace B' # for Browser
-# alt-shift-e = 'move-node-to-workspace E' # for File Explorer (Finder)
-# alt-shift-m = 'move-node-to-workspace M' # for Music
-# alt-shift-n = 'move-node-to-workspace N' # for Notes
+alt-shift-b = 'move-node-to-workspace B' # for Browser
+alt-shift-e = 'move-node-to-workspace E' # for File Explorer (Finder)
+alt-shift-m = 'move-node-to-workspace M' # for Music
+alt-shift-t = 'move-node-to-workspace 1' # for Terminal
 alt-enter = 'exec-and-forget open -n -a Alacritty'
-alt-b = 'exec-and-forget open -n -a /Applications/Zen\ Browser.app'
 alt-s = 'exec-and-forget open -n -a Safari'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
