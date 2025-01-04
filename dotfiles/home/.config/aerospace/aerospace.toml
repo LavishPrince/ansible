@@ -123,10 +123,10 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-# alt-b = 'workspace B' # for Browser
-# alt-e = 'workspace E' # for File Explorer (Finder)
-# alt-m = 'workspace M' # for Music
-# alt-n = 'workspace N' # for Notes
+alt-b = 'workspace B' # for Browser
+alt-e = 'workspace E' # for File Explorer (Finder)
+alt-m = 'workspace M' # for Music
+alt-t = 'workspace T' # for Terminal
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -172,3 +172,20 @@ alt-shift-l = ['join-with right', 'mode main']
 down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
+
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = "move-node-to-workspace T"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = "move-node-to-workspace B"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = "move-node-to-workspace M"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Finder'
+run = "move-node-to-workspace E"
