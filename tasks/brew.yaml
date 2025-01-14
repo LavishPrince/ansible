@@ -26,6 +26,7 @@
     - fzf
     - git
     - git-delta
+    - gitleaks
     - gofumpt
     - golangci-lint
     - helm
