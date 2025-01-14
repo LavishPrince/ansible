@@ -75,6 +75,7 @@ eval "$(zoxide init --cmd cd zsh)"
 source <(minikube completion zsh)
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+source <(gitleaks completion zsh)
 export EDITOR=nvim
 
 tmux_sessionizer(){
