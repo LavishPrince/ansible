@@ -142,6 +142,7 @@ _fzf_comprun() {
   esac
 }
 eval "$(starship init zsh)"
+source <(docker completion zsh)
 export PATH=$HOME/.local/bin:$PATH
 
 
