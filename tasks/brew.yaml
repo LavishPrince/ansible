@@ -35,6 +35,9 @@
     - go
     - golangci-lint
     - gofumpt
+    - superfile
+    - posting
+    - harlequin
   tags:
     - brew
     - zsh
