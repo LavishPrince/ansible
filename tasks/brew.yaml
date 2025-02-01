@@ -18,11 +18,11 @@
     - chafa
     - fd
     - btop
-    - bun
+    - oven-sh/bun/bun
     - deno
     - eza
     - fastlane
-    - sketchybar
+    - felixkratz/formulae/sketchybar
     - fzf
     - git
     - git-delta
@@ -34,7 +34,7 @@
     - jq
     - minikube
     - mas
-    - mongodb-database-tools
+    - mongodb/brew/mongodb-database-tools
     - neovim
     - node
     - onefetch
