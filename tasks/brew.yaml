@@ -16,6 +16,8 @@
   shell: /home/linuxbrew/.linuxbrew/bin/brew install {{ item }}
   loop:
     - fzf
+    - xh
+    - doggo
     - neovim
     - tmux
     - starship
