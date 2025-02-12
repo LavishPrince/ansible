@@ -1,6 +1,8 @@
 # Set the directory where we store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-( eval "$(/opt/homebrew/bin/brew shellenv)" ) 2>/dev/null || :
+if [ -d "/opt/homebrew/bin/" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 # Brew Installation initialization
 (eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)") 2>/dev/null || :
 # Download Zinit, if it's not there yet
