@@ -6,10 +6,10 @@ install_homebrew() {
 
   # Add to PATH (often handled by the installer, but good to include)
   if [[ -f $HOME/.zshrc ]]; then
-    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shell)"' >>$HOME/.zshrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>$HOME/.zshrc
     source $HOME/.zshrc
   elif [[ -f $HOME/.bashrc ]]; then
-    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shell)"' >>$HOME/.bashrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>$HOME/.bashrc
     source $HOME/.bashrc
   fi
 
