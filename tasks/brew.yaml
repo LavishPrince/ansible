@@ -15,6 +15,7 @@
     state: latest
   with_items:
     - localstack
+    - angular-cli
     - awscli-local
     - awscli
     - aws-sam-cli
