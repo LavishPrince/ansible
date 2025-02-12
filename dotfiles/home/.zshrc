@@ -1,6 +1,6 @@
 # Set the directory where we store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # Brew Installation initialization
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Download Zinit, if it's not there yet
@@ -78,6 +78,7 @@ eval "$(zoxide init --cmd cd zsh)"
 source <(minikube completion zsh)
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+source <(gitleaks completion zsh)
 export EDITOR=nvim
 
 tmux_sessionizer(){

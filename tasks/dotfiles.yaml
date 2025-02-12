@@ -1,18 +1,11 @@
-- name: Install software using Linuxbrew
-  become: false
-  shell: /home/linuxbrew/.linuxbrew/bin/brew install {{ item }}
-  loop:
-    - stow
-  tags:
-    - brew
-    - stow
+- name: Install stow using brew
+  community.general.homebrew:
+    name: stow
+    force_formula: true
+    state: latest
 
 - name: Stow Dotfiles
-  become: false
   shell: |
     cd dotfiles
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    /home/linuxbrew/.linuxbrew/bin/stow --adopt -t ~ *
-  tags:
-    - brew
-    - stow
+    stow --adopt -t ~ home

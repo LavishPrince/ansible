@@ -1,36 +1,34 @@
-- name: Install Linuxbrew
-  become: false
-  shell: |
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    git clone https://github.com/junegunn/fzf-git.sh.git
-    mv fzf-git.sh ~
-  tags:
-    - brew
-    - zsh
-    - ranger
-    - tmux
-    - neovim
-- name: Install software using Linuxbrew
-  become: false
-  shell: /home/linuxbrew/.linuxbrew/bin/brew install {{ item }}
-  loop:
-    - fzf
-    - xh
-    - doggo
-    - neovim
-    - tmux
-    - starship
-    - eza
-    - zoxide
+- name: Open Some brew taps
+  community.general.homebrew_tap:
+    name: "{{ item }}"
+  with_items:
+    - FelixKratz/formulae
+    - homebrew/services
+    - koekeishiya/formulae
+    - mongodb/brew
+    - oven-sh/bun
+
+- name: Install CLI tools
+  community.general.homebrew:
+    name: "{{ item }}"
+    force_formula: true
+    state: latest
+  with_items:
+    - localstack
+    - awscli-local
+    - awscli
+    - aws-sam-cli
+    - bat
+    - chafa
+    - fd
     - btop
-    - tlrc
-    - rg
-    - ranger
-    - zsh
-    - minikube
-    - kubectl
-    - helm
+    - oven-sh/bun/bun
+    - deno
+    - eza
+    - fastlane
+    - felixkratz/formulae/sketchybar
+    - fzf
+    - git
     - git-delta
     - rustfmt
     - rust-analyzer
@@ -40,9 +38,67 @@
     - superfile
     - posting
     - harlequin
-  tags:
-    - brew
-    - zsh
-    - ranger
-    - tmux
+    - gitleaks
+    - gofumpt
+    - golangci-lint
+    - helm
+    - htop
+    - jq
+    - minikube
+    - mas
+    - mongodb/brew/mongodb-database-tools
     - neovim
+    - node
+    - onefetch
+    - ranger
+    - ripgrep
+    - rust
+    - starship
+    - stow
+    - tmux
+    - tlrc
+    - wget
+    - xcbeautify
+    - yarn
+    - zoxide
+    - zsh
+
+- name: Install GUI apps (casks)
+  community.general.homebrew_cask:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - nikitabobko/tap/aerospace
+    - alacritty
+    - android-file-transfer
+    - anydesk
+    - orbstack
+    - font-meslo-lg-nerd-font
+    - font-jetbrains-mono-nerd-font
+    - font-sf-pro
+    - ghostty
+    - karabiner-elements
+    - google-chrome
+    - protonvpn
+    - raycast
+    - royal-tsx
+    - sf-symbols
+    - termius
+    - tor-browser
+    - twingate
+    - zed
+    - zen-browser
+    - whatsapp
+    - wezterm
+
+- name: Install Mac App Store
+  community.general.mas:
+    id: "{{item}}"
+    state: latest
+  with_items:
+    - 409201541
+    - 497799835
+    - 571213070
+    - 409183694
+    - 409203825
+    - 1527554407

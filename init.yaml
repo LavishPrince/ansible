@@ -1,28 +1,10 @@
 ---
 - name: Setup New System
   hosts: localhost
-  become: true
-  pre_tasks:
-    - name: Update Cache
-      apt:
-        update_cache: true
-      tags:
-        - brew
-        - node
-        - basic
-        - tmux
-        - dotfiles
-        - zsh
-        - ranger
-        - neovim
-        - sshkey
-
   tasks:
-    - include_tasks: ./tasks/basic-tools.yaml
-    - include_tasks: ./tasks/node.yaml
-    - include_tasks: ./tasks/docker.yaml
-    - include_tasks: ./tasks/brew.yaml
-    - include_tasks: ./tasks/dotfiles.yaml
-    - include_tasks: ./tasks/ssh.yaml
-      tags:
-        - sshkey
+    - name: Clone fzf-git.sh
+      ansible.builtin.git:
+        repo: "https://github.com/junegunn/fzf-git.sh.git"
+        dest: "$HOME/fzf-git.sh"
+    - ansible.builtin.include_tasks: ./tasks/brew.yaml
+    - ansible.builtin.include_tasks: ./tasks/dotfiles.yaml

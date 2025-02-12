@@ -5,7 +5,7 @@ alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
 
 alt - return : open -n -a "Alacritty"
-alt - b : open -n -a "Safari"
+alt - b : open -n -a "Google Chrome"
 
 #change focus between external displays (left and right)
 alt - s: yabai -m display --focus west
