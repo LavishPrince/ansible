@@ -148,7 +148,10 @@ eval "$(starship init zsh)"
 source <(docker completion zsh)
 export PATH=$HOME/.local/bin:$PATH
 
-
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 source <(devbox completion zsh)
