@@ -43,7 +43,7 @@ brew update
 packages=("fzf" "xh" "doggo" "neovim" "tmux" "starship" "stow" "eza" "zoxide" "btop" "tlrc" "ripgrep" "ranger" "zsh" "minikube" "kubectl" "helm" "git-delta" "rustfmt" "rust-analyzer" "go" "golangci-lint" "gofumpt" "superfile" "posting" "harlequin")
 
 for package in "${packages[@]}"; do
-  if ! brew install "$package"; then
+  if ! /home/linuxbrew/.linuxbrew/bin/brew install "$package"; then
     echo "Error: Failed to install package '$package'"
     exit 1
   fi
