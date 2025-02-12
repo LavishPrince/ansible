@@ -1,4 +1,5 @@
 .DS_Store
+dotfiles/home/**/lazy-lock.json
 dotfiles/**/LavishPrince
 dotfiles/**/Vinaydg
 dotfiles/**/known_hosts
