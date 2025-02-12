@@ -30,7 +30,6 @@
     - fzf
     - git
     - git-delta
-    - rustfmt
     - rust-analyzer
     - go
     - golangci-lint
