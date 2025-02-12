@@ -1,0 +1,8 @@
+window-decoration = false
+shell-integration = none
+theme = Ayu Mirage
+background = black
+background-opacity = 0.8
+background-blur-radius = 30
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 18
