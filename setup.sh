@@ -65,7 +65,7 @@ fi
 
 cd dotfiles
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm/
-stow --adopt -t $HOME home
+/home/linuxbrew/.linuxbrew/bin/stow --adopt -t $HOME home
 echo "Dotfiles stowed successfully!"
 
 cp ./sshkeys/* $HOME/.ssh/
