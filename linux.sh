@@ -40,7 +40,7 @@ echo "Docker installed and started successfully!"
 brew update
 
 # Install the packages
-packages=("fzf" "xh" "doggo" "neovim" "tmux" "starship" "stow" "eza" "zoxide" "btop" "tlrc" "ripgrep" "ranger" "zsh" "minikube" "kubectl" "helm" "git-delta" "angular-cli" "rustfmt" "rust-analyzer" "go" "golangci-lint" "gofumpt" "superfile" "posting" "harlequin")
+packages=("fzf" "xh" "doggo" "neovim" "tmux" "starship" "stow" "eza" "zoxide" "btop" "tlrc" "ripgrep" "ranger" "zsh" "minikube" "kubectl" "helm" "git-delta" "angular-cli" "gitleaks" "rustfmt" "rust-analyzer" "go" "golangci-lint" "gofumpt" "superfile" "posting" "harlequin")
 
 for package in "${packages[@]}"; do
   if ! /home/linuxbrew/.linuxbrew/bin/brew install "$package"; then
@@ -59,4 +59,7 @@ echo "Dotfiles stowed successfully!"
 
 nix profile install github:guibou/nixGL --impure
 nix profile install github:ghostty-org/ghostty
-nix profile install alacritty devbox
+nix profile install nixpkgs#alacritty nixpkgs#devbox
+
+brew install --cask font-jetbrains-mono-nerd-font
+fc-cache -v
