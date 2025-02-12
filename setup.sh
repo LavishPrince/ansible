@@ -59,10 +59,10 @@ elif [[ "$(uname -s)" == "Linux" ]]; then
   install_homebrew
   install_nix_linux
   ./linux.sh
+  cp ../sshkeys/* $HOME/.ssh/
 else
   echo "Unknown operating system detected."
 fi
 
-cp ../sshkeys/* $HOME/.ssh/
 ansible-vault decrypt $HOME/.ssh/LavishPrince
 ansible-vault decrypt $HOME/.ssh/Vinaydg
