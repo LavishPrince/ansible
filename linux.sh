@@ -40,7 +40,7 @@ echo "Docker installed and started successfully!"
 brew update
 
 # Install the packages
-packages=("fzf" "xh" "doggo" "neovim" "tmux" "starship" "stow" "eza" "zoxide" "btop" "tlrc" "ripgrep" "ranger" "zsh" "minikube" "kubectl" "helm" "git-delta" "rustfmt" "rust-analyzer" "go" "golangci-lint" "gofumpt" "superfile" "posting" "harlequin")
+packages=("fzf" "xh" "doggo" "neovim" "tmux" "starship" "stow" "eza" "zoxide" "btop" "tlrc" "ripgrep" "ranger" "zsh" "minikube" "kubectl" "helm" "git-delta" "angular-cli" "rustfmt" "rust-analyzer" "go" "golangci-lint" "gofumpt" "superfile" "posting" "harlequin")
 
 for package in "${packages[@]}"; do
   if ! /home/linuxbrew/.linuxbrew/bin/brew install "$package"; then
@@ -57,4 +57,6 @@ git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm/
 /home/linuxbrew/.linuxbrew/bin/stow --adopt -t $HOME home
 echo "Dotfiles stowed successfully!"
 
-nix profile install github:guibou/nixGL github:ghostty-org/ghostty
+nix profile install github:guibou/nixGL --impure
+nix profile install github:ghostty-org/ghostty
+nix profile install alacritty devbox
