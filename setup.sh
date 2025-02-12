@@ -54,6 +54,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
   install_homebrew
   install_nix_macos
   ./mac.sh
+  cp sshkeys/* $HOME/.ssh/
 elif [[ "$(uname -s)" == "Linux" ]]; then
   echo "Linux detected. Running linux.sh"
   install_homebrew
