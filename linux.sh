@@ -50,3 +50,11 @@ for package in "${packages[@]}"; do
 done
 
 echo "Packages installed successfully!"
+
+cd dotfiles
+git clone https://github.com/junegunn/fzf-git.sh.git $HOME/fzf-git.sh
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm/
+/home/linuxbrew/.linuxbrew/bin/stow --adopt -t $HOME home
+echo "Dotfiles stowed successfully!"
+
+nix profile install github:guibou/nixGL github:ghostty-org/ghostty

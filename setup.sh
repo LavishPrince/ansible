@@ -63,11 +63,6 @@ else
   echo "Unknown operating system detected."
 fi
 
-cd dotfiles
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm/
-/home/linuxbrew/.linuxbrew/bin/stow --adopt -t $HOME home
-echo "Dotfiles stowed successfully!"
-
 cp ../sshkeys/* $HOME/.ssh/
 ansible-vault decrypt $HOME/.ssh/LavishPrince
 ansible-vault decrypt $HOME/.ssh/Vinaydg
