@@ -6,7 +6,7 @@ source $HOME/.bashrc
 sudo apt update
 
 # Install prerequisites
-packages=("ansible" "build-essential" "curl" "file" "git" "ruby" "ruby-dev" "i3" "polybar" "picom" "rofi" "nodejs" "npm" "apt-transport-https" "ca-certificates" "curl" "gnupg" "lsb-release")
+packages=("feh" "ansible" "build-essential" "curl" "file" "git" "ruby" "ruby-dev" "i3" "polybar" "picom" "rofi" "nodejs" "npm" "apt-transport-https" "ca-certificates" "curl" "gnupg" "lsb-release")
 
 for package in "${packages[@]}"; do
   sudo apt install -y "$package"
