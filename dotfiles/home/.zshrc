@@ -4,7 +4,11 @@ if [ -d "/opt/homebrew/bin/" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 # Brew Installation initialization
-(eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)") 2>/dev/null || :
+
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
