@@ -58,11 +58,11 @@ preset = 'qwerty'
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 0
-inner.vertical =   0
-outer.left =       0
-outer.bottom =     0
-outer.top =        0
-outer.right =      0
+inner.vertical = 0
+outer.left = 0
+outer.bottom = 0
+outer.top = 0
+outer.right = 0
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
@@ -138,11 +138,11 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-b = 'move-node-to-workspace B' # for Browser
-alt-shift-e = 'move-node-to-workspace E' # for File Explorer (Finder)
-alt-shift-m = 'move-node-to-workspace M' # for Music
-alt-shift-t = 'move-node-to-workspace 1' # for Terminal
-alt-enter = 'exec-and-forget open -n -a Alacritty'
+alt-shift-b = 'move-node-to-workspace B'         # for Browser
+alt-shift-e = 'move-node-to-workspace E'         # for File Explorer (Finder)
+alt-shift-m = 'move-node-to-workspace M'         # for Music
+alt-shift-t = 'move-node-to-workspace T'         # for Terminal
+alt-enter = 'exec-and-forget open -n -a Ghostty'
 alt-s = 'exec-and-forget open -n -a Safari'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -158,7 +158,10 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2

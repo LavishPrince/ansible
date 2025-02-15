@@ -69,7 +69,6 @@
     state: latest
   with_items:
     - nikitabobko/tap/aerospace
-    - alacritty
     - android-file-transfer
     - anydesk
     - orbstack
@@ -89,7 +88,6 @@
     - zed
     - zen-browser
     - whatsapp
-    - wezterm
 
 - name: Install Mac App Store
   community.general.mas:
