@@ -55,7 +55,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
   cp sshkeys/* $HOME/.ssh/
 elif [[ "$(uname -s)" == "Linux" ]]; then
   echo "Linux detected. Running linux.sh"
-  install_homebrew
+  install_linuxbrew
   install_nix_linux
   ./linux.sh
   cp ../sshkeys/* $HOME/.ssh/
