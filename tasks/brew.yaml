@@ -65,7 +65,7 @@
 
 - name: Install GUI apps (casks)
   community.general.homebrew_cask:
-    name: "{{item}}"
+    name: "{{ item }}"
     state: latest
   with_items:
     - nikitabobko/tap/aerospace
@@ -93,7 +93,7 @@
 
 - name: Install Mac App Store
   community.general.mas:
-    id: "{{item}}"
+    id: "{{ item }}"
     state: latest
   with_items:
     - 409201541
