@@ -3,6 +3,7 @@
     name: "{{ item }}"
   with_items:
     - FelixKratz/formulae
+    - hashicorp/tap
     - homebrew/services
     - koekeishiya/formulae
     - mongodb/brew
@@ -55,6 +56,7 @@
     - rust
     - starship
     - stow
+    - hashicorp/tap/terraform
     - tmux
     - tlrc
     - wget
