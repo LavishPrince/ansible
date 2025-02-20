@@ -97,9 +97,9 @@
     id: "{{ item }}"
     state: latest
   with_items:
-    - 409201541
-    - 497799835
-    - 571213070
-    - 409183694
-    - 409203825
-    - 1527554407
+    - 409201541 # Pages
+    - 497799835 # Xcode
+    - 571213070 # Davinci Resolve
+    - 409183694 # Keynote
+    - 409203825 # Numbers
+    - 1527554407 # Mockup - UI & UX
