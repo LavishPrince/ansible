@@ -8,6 +8,7 @@
     - koekeishiya/formulae
     - mongodb/brew
     - oven-sh/bun
+    - infisical/get-cli
 
 - name: Install CLI tools
   community.general.homebrew:
@@ -26,6 +27,8 @@
     - btop
     - oven-sh/bun/bun
     - deno
+    - doppler
+    - infisical/get-cli/infisical
     - eza
     - fastlane
     - felixkratz/formulae/sketchybar

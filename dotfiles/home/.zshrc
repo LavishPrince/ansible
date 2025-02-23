@@ -159,3 +159,4 @@ fi
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 source <(devbox completion zsh)
+source <(doppler completion zsh)
