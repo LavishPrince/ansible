@@ -40,7 +40,7 @@ echo "Docker installed and started successfully!"
 brew update
 
 # Install the packages
-packages=("fzf" "xh" "doggo" "neovim" "tmux" "starship" "stow" "eza" "zoxide" "btop" "tlrc" "ripgrep" "ranger" "zsh" "minikube" "kubectl" "helm" "git-delta" "angular-cli" "gitleaks" "rustfmt" "rust-analyzer" "go" "golangci-lint" "gofumpt" "superfile" "posting" "harlequin")
+packages=("fzf" "xh" "doggo" "neovim" "tmux" "starship" "stow" "eza" "zoxide" "btop" "tlrc" "ripgrep" "ranger" "zsh" "minikube" "kubectl" "helm" "git-delta" "angular-cli" "gitleaks" "rustfmt" "rust-analyzer" "go" "golangci-lint" "gofumpt" "superfile" "posting" "hashicorp/tap/terraform" "infisical/get-cli/infisical" "harlequin")
 
 for package in "${packages[@]}"; do
   if ! /home/linuxbrew/.linuxbrew/bin/brew install "$package"; then
