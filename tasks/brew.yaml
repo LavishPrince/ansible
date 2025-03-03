@@ -16,6 +16,7 @@
     force_formula: true
     state: latest
   with_items:
+    - elixir
     - localstack
     - angular-cli
     - awscli-local
