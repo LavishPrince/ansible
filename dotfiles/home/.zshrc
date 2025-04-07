@@ -49,6 +49,7 @@ bindkey '^[[B' history-search-forward  # Down key
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH="/Library/TeX/texbin:$PATH"
 # History
 HISTSIZE=6000
 HISTFILE=~/.zsh_history
