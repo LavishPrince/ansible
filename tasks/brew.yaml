@@ -77,21 +77,19 @@
   with_items:
     - nikitabobko/tap/aerospace
     - android-file-transfer
-    - anydesk
     - miniconda
     - orbstack
     - font-meslo-lg-nerd-font
     - font-jetbrains-mono-nerd-font
     - font-sf-pro
     - ghostty
+    - postman
     - karabiner-elements
     - mactex-no-gui
     - google-chrome
     - protonvpn
     - raycast
-    - royal-tsx
     - sf-symbols
-    - termius
     - tor-browser
     - twingate
     - zed
