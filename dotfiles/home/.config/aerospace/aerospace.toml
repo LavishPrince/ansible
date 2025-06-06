@@ -181,8 +181,13 @@ shift-down = ['volume set 0', 'mode main']
 if.app-id = 'com.mitchellh.ghostty'
 run = "move-node-to-workspace T"
 
+
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
+run = "move-node-to-workspace B"
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
 
 [[on-window-detected]]
