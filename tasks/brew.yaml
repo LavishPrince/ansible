@@ -4,7 +4,6 @@
   with_items:
     - FelixKratz/formulae
     - hashicorp/tap
-    - homebrew/services
     - koekeishiya/formulae
     - mongodb/brew
     - oven-sh/bun
