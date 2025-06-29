@@ -1,6 +1,7 @@
 # ansible
 
-This repository contains the Ansible playbook that will install and configure all software and configurations to get started in my new machine.
+This repository contains the Ansible playbook that will install and configure all
+software and configurations to get started in my new machine.
 
 ## Usage
 
