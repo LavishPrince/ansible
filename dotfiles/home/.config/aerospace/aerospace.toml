@@ -191,6 +191,10 @@ if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
 
 [[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = "move-node-to-workspace B"
+
+[[on-window-detected]]
 if.app-id = 'com.apple.Music'
 run = "move-node-to-workspace M"
 
