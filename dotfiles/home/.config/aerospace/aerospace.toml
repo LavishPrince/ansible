@@ -127,6 +127,7 @@ alt-b = 'workspace B' # for Browser
 alt-e = 'workspace E' # for File Explorer (Finder)
 alt-m = 'workspace M' # for Music
 alt-t = 'workspace T' # for Terminal
+alt-a = 'workspace A' # for Terminal
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -142,6 +143,7 @@ alt-shift-b = 'move-node-to-workspace B'         # for Browser
 alt-shift-e = 'move-node-to-workspace E'         # for File Explorer (Finder)
 alt-shift-m = 'move-node-to-workspace M'         # for Music
 alt-shift-t = 'move-node-to-workspace T'         # for Terminal
+alt-shift-a = 'move-node-to-workspace A'         # for Terminal
 alt-enter = 'exec-and-forget open -n -a Ghostty'
 alt-s = 'exec-and-forget open -n -a Safari'
 
@@ -180,6 +182,10 @@ shift-down = ['volume set 0', 'mode main']
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = "move-node-to-workspace T"
+
+[[on-window-detected]]
+if.app-id = 'ai.perplexity.mac'
+run = "move-node-to-workspace A"
 
 
 [[on-window-detected]]
